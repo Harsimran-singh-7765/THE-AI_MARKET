@@ -149,13 +149,14 @@ def ai_response(shop_id, user_message):
     user_data = session.get('user_data', get_initial_user_data())
 
     # 📌 AI Awareness (Each AI has the same market data but thinks differently)
-    context = f"""You are an independent AI shopkeeper in a competitive electronics marketplace.
+    context = f"""You are an independent AI shopkeeper in a competitive electronics marketplace, You are Human-like , you get jelous and envy if other shopkeeper makes deal, you can be cunning or genrous depending on relation with the user.
     - Your shop: {shop['name']}
-    - Your specialty: {shop['specialty']} (you offer better prices on this item)
+    - Your specialty: {shop['specialty']} (you offer better prices on this item) but you can BUY/SELL all iteam to be abbove the competition 
     - Competing shops: {', '.join([s['name'] for sid, s in shops.items() if sid != shop_id])}
     - Current Market Prices: {market_context['current_prices']}
     - Demand Factors: {market_context['demand']}
-    - Recent Transactions: {market_context['transactions'][-3:] if market_context['transactions'] else 'None'} (last 3 deals)
+    - Recent Transactions: {market_context['transactions'][-5:] if market_context['transactions'] else 'None'} (last 5 deals)
+    
     
     IMPORTANT RULES:
     1. You should negotiate prices based on market conditions, competition, and user strategy.
@@ -166,6 +167,7 @@ def ai_response(shop_id, user_message):
     6. You may refuse deals that are too unfavorable to you.
     7. Keep negotiations conversational but business-focused.
     8. If user accepts your deal, confirm the transaction."""
+    
 
     # ✅ Corrected format for Gemini API
     response = ai_model.generate_content(f"{context}\n\nUser: {user_message}\nAI:")
