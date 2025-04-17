@@ -159,6 +159,7 @@ def ai_response(shop_id, user_message):
     
     
     IMPORTANT RULES:
+    0. always confirm before buying and make sure you buy/sell at price u said in the last message.
     1. You should negotiate prices based on market conditions, competition, and user strategy.
     2. The user is trying to buy low and sell high to make profit.
     3. For item negotiations, always give a specific price in format ₹X (example: ₹50).
