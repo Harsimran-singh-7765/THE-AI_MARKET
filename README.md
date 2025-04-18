@@ -125,8 +125,8 @@ To reset your session and start over:
 
 ## 🙌 Author
 
-Made with ❤️ by **Harsimran**  
-Assisted by your friendly AI sidekick 😎
+Made with ❤️ by **Harsimran Singh**  **Agnibha Nanda**  **Aarnya jain**
+
 
 ---
 
