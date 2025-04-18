@@ -40,14 +40,14 @@ Each shopkeeper uses a **Gemini AI model** and has access to **market data**, re
 ---
 
 ## 📂 Project Structure
-
+```
  your-project/ 
    ├── app.py #Main Flask App 
    ├── templates/ 
      │ 
      └── index.html # Main frontend 
      └── static/ # (Optional) For JS/CSS/Images
-
+```
 
 ---
 
